@@ -44,3 +44,9 @@ def encrypt_file(infile: str, outfile: str, passphrase: str):
 
         fout.write(encryptor.finalize())     # Final block
         fout.write(encryptor.tag)            # Write 16B auth tag
+
+
+if __name__ == "__main__":
+    encrypt_file("example.txt", "example.enc", "mystrongpassword")
+    print("Encryption complete.")
+
